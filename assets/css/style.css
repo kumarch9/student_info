@@ -1,0 +1,153 @@
+#container {
+
+    position: fixed;
+    margin-inline: 513px;
+
+
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+footer {
+    position: fixed;
+    left: 0.6%;
+    bottom: 0px;
+    width: 98%;
+    border: 6px solid rgb(6, 209, 6);
+    background-color: rgb(6, 209, 6);
+    justify-items: center;
+    height: 15px;
+
+}
+
+#pnav {
+    float: left;
+    position: fixed;
+    margin-inline: 40px;
+    margin-top: 10px;
+    font-size: auto;
+}
+
+header {
+    position: fixed;
+    height: 6%;
+    width: 98%;
+    border: 6px solid rgb(6, 209, 6);
+    margin-top: -9px;
+    justify-content: left;
+    background: rgb(6, 209, 6);
+}
+
+#foothead {
+    font-family: monospace;
+    font-size: inherit;
+    text-align: center;
+    position: fixed;
+    color: black;
+    margin: 2px;
+    margin-inline: 515px;
+}
+
+
+
+
+h1,
+h2,
+p,
+label {
+    text-align: center;
+    color: rgb(6, 209, 6);
+}
+
+
+
+.alink{
+    color: black;
+    border: 3px solid red;
+    padding: 4px;
+    font: inherit;
+}
+
+.alink:hover {
+    font-size: 150%;
+
+    margin-block: 50%;
+    color: rgb(6, 209, 6);
+    background-color: black;
+    border: 6px solid red;
+
+}
+
+.alink:active {
+    color: red;
+    border-color: rgb(6, 209, 6);
+}
+
+table {
+    color: rgb(6, 209, 6);
+    background-color: black;
+    border: 5px solid red;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    font-size: 14px;
+    min-inline-size: -webkit-fill-available;
+}
+
+
+hr {
+    border: 2px solid rgb(6, 209, 6);
+    box-shadow: 2px;
+}
+
+body {
+    background-color: black;
+
+}
+
+#sinfotitle {
+    text-align: center;
+    color: rgb(6, 209, 6);
+    margin-top: 41px;
+}
+
+section {
+    justify-items: center;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(6, 209, 6);
+    border: 2px solid red;
+    /* width: 90px; */
+    /* height: 30px; */
+    font-size: 15px;
+    padding: 9px;
+}
+
+.txtHeading {
+    justify-content: center;
+    margin-top: 1%;
+    padding-bottom: 30px;
+}
+
+hr {
+    color: rgb(6, 209, 6);
+}
+
+#stdform {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+
+#rowedit{
+    color: rgb(6, 209, 6);
+}
+
+#rowdelete{
+    color: rgb(6, 209, 6);
+}

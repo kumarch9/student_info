@@ -1,0 +1,62 @@
+{{template "header" .}}
+<main>
+
+    <section>
+        {{if .Status}}
+        <h1>{{.Message}}</h1>
+        <br />
+        <div class="txtHeading">
+            <p>Update the information of student.</p><br />
+        </div>
+        {{range $g := .Data}}
+        <p>age: {{.Age}}</p>
+        <div id="stdformupdate">
+            <form  action="/update"  method="POST">
+                <label for="sid">ID:</label>
+                <input type="text" name="stdid" id="sid"  value="{{.Id}}" disabled  /><br><br>
+                <label for="fname">First Name:</label>
+                <input type="text" name="stdfname" id="fname" value="{{.Fname}}" required /><br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="stdlname" id="lname" value="{{.Lname}}" required /><br><br>
+                <label for="age">Age:</label>
+                <input type="date" name="stdage" id="age" value="{{.Age}}" required /><br><br>
+                <label for="fathername">Fathername:</label>
+                <input type="text" name="stdfathername" id="fathername" value="{{.Fathername}}" required /><br><br>
+                <label for="address">Address:</label>
+                <input type="text" name="stdaddress" id="address" value="{{.Address}}" required /><br><br>
+                <label for="state">State:</label>
+                <input type="text" name="stdstate" id="state" value="{{.State}}" required /><br><br>
+                <label for="country">Country:</label>
+                <input type="text" name="stdcountry" id="country" value="{{.Country}}" required /><br /><br />
+
+                <label for="course">Course:</label>
+                <select name="stdcourse" id="course">
+                    <option selected="selected">{{.Course}}</option>
+                    <option value="BSc.">B.Sc.</option>
+                    <option value="MSc.">MSc.</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="M.Tech">M.Tech</option>
+                </select><br><br>
+
+                <label for="batch">Batch:</label>
+                <input type="text" name="stdbatch" id="batch" value="{{.Batch}}" required /><br><br>
+                <label for="rollnum">Roll No.:</label>
+                <input type="number" name="stdrollnum" id="rollnum" value="{{.Rollnum}}" required /><br><br>
+                <br />
+                <input class="btn" type="submit" name="update" value="Update" />&nbsp;&nbsp;
+                <input class="btn" type="button" name="Cancel" onclick="window.location.href='/'"
+                    value="Cancel" /><br />
+            </form>
+        </div>
+        {{end}}
+        {{else}}
+        <h1>No record found !</h1>
+        <input class="btn" type="button" name="btnback_tput" onclick="window.location.href= '/'"
+            value="Back" />&nbsp;&nbsp;
+        {{end}}
+
+
+    </section>
+</main>
+
+{{template "footer" .}}

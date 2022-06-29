@@ -1,0 +1,25 @@
+{{template "header" .}}
+<main>
+
+    <section>
+        <P>Write your any query on subject.</P>
+        {{if .Status}}
+        <h1>{{.Message}}</h1>
+        <input class="btn" type="button" name="back" onclick="window.location.href='/'" value="Back" /><br />
+        {{else}}
+        <div id="msgform">
+            <form method="POST" action="/contact">
+                <label for="usermail">E-Mail ID:</label><br/>
+                <input type="email" name="mailid" id="usermail" required /><br /><br />
+                <label for="sendtxtarea">Message :</label><br />
+                <textarea name="sendtxt" id="sendtxtarea" required /> </textarea><br /><br />
+                <input class="btn" type="submit" name="send" value="Send" />&nbsp;&nbsp;
+                <input class="btn" type="button" name="cancel" onclick="window.location.href='/'"
+                    value="Cancel" /><br />
+            </form>
+        </div>
+       {{end}}
+    </section>
+</main>
+
+{{template "footer" .}}

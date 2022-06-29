@@ -1,0 +1,23 @@
+{{template "header" .}}
+
+
+<main>
+    <div class="txtHeading">
+        &nbsp;
+        <h2 class="centerTxt">Welcome Student Information System.</h2>&nbsp;
+        <p>What do you want with students info system.</p><br/>
+        {{if .Status}}
+        <h1>{{.Message}}</h1>
+        {{end}}
+
+
+    </div>
+    
+    <section>
+        <br/>
+        <input class="btn"  type="button" name="btnInsert" onclick="window.location.href = '/insert'" value="Insert New"/>&nbsp;&nbsp;
+        <input class="btn" type="button" name="btnShow" onclick="window.location.href = '/get'" value="Show All"/>&nbsp;&nbsp;
+        
+    </section>
+</main>
+{{template "footer" .}}

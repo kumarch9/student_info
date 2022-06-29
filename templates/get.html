@@ -1,0 +1,51 @@
+{{template "header" .}}
+
+
+<main>
+    <div class="txtHeading">
+        {{if .Status}}
+        <table border="2">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Fathername</th>
+                <th>Address</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Course</th>
+                <th>Batch</th>
+                <th>Rollnum</th>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+            {{range $g := .Data}}
+            <tr>
+                <td>{{.Id}}</td>
+                <td>{{.Fname}} {{.Lname}}</td>
+                <td>{{.Age }}</td>
+                <td>{{.Fathername}}</td>
+                <td>{{.Address}}</td>
+                <td>{{.State}}</td>
+                <td>{{.Country}}</td>
+                <td>{{.Course}}</td>
+                <td>{{.Batch}}</td>
+                <td>{{.Rollnum}}</td>
+                <td><a id="rowedit" href="/put?id={{ .Id }}">Edit</a></td>
+                <td><a id="rowdelete" href="/delete?id={{ .Id }}">Delete</a>
+                <td>
+            </tr>
+            {{end}}
+        </table>
+        {{else}}
+        <h1 style="color: red;">No Data Found!</h1>
+        {{end}}
+        <section>
+            <br /><br /><br />
+            <input class="btn" type="button" name="btnback_tget" onclick="window.location.href= '/'"
+                value="Back" />&nbsp;&nbsp;
+        </section>
+
+    </div>
+</main>
+{{template "footer" .}}
